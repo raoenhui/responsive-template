@@ -1,0 +1,299 @@
+/********************************************************************
+	ZYPOP - HTTPS://ZYPOPWEBTEMPLATES.COM
+	FREE WEB TEMPLATES
+********************************************************************/
+
+
+/**
+This file contains the core CSS for this template.
+Set the variable values in _variables.scss 
+**/
+
+
+/** 
+Page structure and elements 
+**/
+body { 
+    background-color: $primary;	
+    font-family: $font-family;
+    color: $body-color;
+    font-size: $font-size;
+    line-height: $line-height;
+    background-image: url(../background.jpg);
+    background-repeat: repeat-x;
+    background-position: bottom left;
+    background-attachment: fixed;
+}
+
+.wrapper {
+    max-width: $wrapper-max-width;
+    margin: $padding auto;
+}
+.content-wrapper {
+    margin-left: 100 - $content-width - 5;
+    padding-left: $padding;
+    border-left: 1px solid lighten($body-color, 32%); 
+}
+.left .content-wrapper {
+    margin-left: 0;
+    padding-left: 0;
+    border-left: 0;
+    margin-right: 100 - $content-width - 5;
+    padding-right: $padding;
+    border-right: 1px solid lighten($body-color, 32%); 
+}
+
+
+
+
+a, .page-link {
+    color: lighten($secondary, 15%);
+    font-weight: bold;
+    &:hover,
+    &:focus,
+    &:active {
+        color: lighten($secondary, 25%);
+    }
+}
+
+fieldset { 
+    margin-bottom: $spacer; 
+    display: block;
+    border-top: 1px solid #ccc;
+}
+fieldset legend { 
+    width: auto;
+    padding-right: 0.5rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+table th { 
+    background-color: $secondary;
+    color: #fff;
+	border-color:darken($secondary, 15%) !important;
+	border-bottom: 1px solid darken($secondary, 15%);
+}
+
+blockquote {
+    display: block;
+    border-left: 5px solid lighten($primary, 20%);
+    padding: 0.5rem;
+	color: $body-color;
+    margin-bottom: $spacer;
+
+}
+pre code {
+}
+
+p { 
+    margin: 0 0 $spacer;
+}
+
+h1, h2, h3, h4, h5, h6
+{
+    color: darken($body-color, 20%);
+    font-weight: bold;
+    margin: 0 0 $spacer;
+}
+
+h3 { 
+    color: lighten($secondary, 10%);
+}
+.text-center {
+    text-align: center;
+}
+.no-spacer {
+    margin-bottom: 0 !important;
+}
+
+/**
+Profile Area 
+**/
+.profile-area {
+    width: 100 - $content-width - 10;
+    float: left;
+    text-align: right;
+}
+
+.left .profile-area {
+    text-align: left;
+    float: right;
+}
+.profile-area img {
+    max-width: 200px;
+    height: auto;
+    border-radius: 100px;
+}
+header {
+    padding: ($padding / 6) 0;
+}
+header h1 {
+	color: #666;
+    font-size: $font-size * 1.5;
+	letter-spacing: -0.2rem;
+    line-height: $font-size * 2;
+}
+header h2 {
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: darken($body-color, 5%);
+}
+
+/** 
+Social Icons
+**/
+.social-icons {
+    text-align: right;
+    font-size: $font-size - 1;
+    margin-top: 10px;
+}
+.left .social-icons {
+    text-align: left;
+}
+.social-icons a {
+    margin-left: 20px; 
+    color: lighten($body-color, 20%);
+    font-weight: normal;
+    &:hover,
+    &:focus,
+    &:active {
+        color: lighten($secondary, 5%);
+    }
+}
+.left .social-icons a {
+    margin-left: 0;
+    margin-right: 20px;
+}
+
+/**
+Footer
+**/
+footer { 
+	border-top: 1px solid $border-color;
+    color: darken($body-color, 25%);
+	font-size: 0.9rem;
+    text-align: center;
+    margin-top: 0;
+    padding-top: $padding / 4;
+}
+footer p { 
+    margin-bottom: 0;
+}
+footer a {
+    color: darken($body-color, 30%);
+    font-weight: normal;
+    &:hover,
+    &:focus,
+    &:active {
+        color: darken($body-color, 40%);
+    }
+}
+
+
+/** 
+Button
+**/
+a.button {
+    color: #fff;
+    font-weight: bold;
+    background-color: $secondary;
+    padding: 5px 15px;
+    border-radius: 10px;
+    display: inline-block;
+    text-decoration: none;
+    &:hover,
+    &:focus,
+    &:active {
+        background-color: darken($secondary, 5%);
+    }
+}
+a.button.button-large {
+    font-size: 1.4em;
+    padding: 15px 45px;
+    border-radius: 30px;
+}
+
+/** 
+Articles
+**/
+main {
+}
+article {
+	margin-bottom: $padding / 4;
+	border-bottom: 1px solid $border-color;
+	padding-bottom: $padding / 4;
+	font-size: 1.4rem;
+}
+
+article h2.article-title {
+	font-size: 3rem;
+	letter-spacing: -1px;
+    font-weight: 400;
+}
+
+article p.article-meta {
+	color: #ccc;
+	font-size: 1rem;
+}
+
+
+/**
+Responsive TO DO
+**/
+@media screen and (max-width: $wrapper-max-width) {
+    .wrapper {
+        padding: 0 ($padding / 1.5);
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .wrapper {
+        margin-top: 10px;
+    }
+    .content-wrapper {
+        margin: 0 !important;
+        padding: 0 !important;
+        border: none !important;
+    }
+    .profile-area {
+        float: none !important;
+        width: auto !important;
+    }
+    header, .social-icons, .left .social-icons {
+        text-align: center;
+    }
+    .social-icons {
+        font-size: $font-size - 1.5;
+    }
+    .social-icons a {
+        margin: 0 5px;
+    }
+    .profile-area img {
+        max-width: 100px;
+        }
+    header h1 {
+        font-size: $font-size + 0.5;
+        letter-spacing: -0.1rem;
+        line-height: $font-size;
+    }
+    header h2 {
+        font-size: 1.1rem;
+    }
+    article {
+        font-size: 1.1rem;
+        line-height: 1.9rem;
+    }
+    article h2.article-title {
+        font-size: 1.5em;
+    }
+    h1, h2, h3, h4, h5, h6 {
+        margin-bottom: $spacer / 2;
+    }
+}
+
+
+
+
+
+
